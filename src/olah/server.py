@@ -1249,11 +1249,10 @@ def main():
     args = init()
     import uvicorn
     uvicorn.run(
-        "olah.server:app",
+        app,
         host=args.host,
         port=args.port,
         log_level="info",
-        reload=False,
         ssl_keyfile=args.ssl_key,
         ssl_certfile=args.ssl_cert
     )
@@ -1262,11 +1261,10 @@ def cli():
     args = init()
     import uvicorn
     uvicorn.run(
-        "olah.server:app",
+        app,
         host=args.host,
         port=args.port,
         log_level="info",
-        reload=False,
         ssl_keyfile=args.ssl_key,
         ssl_certfile=args.ssl_cert,
     )
