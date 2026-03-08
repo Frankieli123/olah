@@ -5,12 +5,19 @@
 # license that can be found in the LICENSE file or at
 # https://opensource.org/licenses/MIT.
 
+import sys
+import os
+
+# Add src to sys.path if running from the root
+current_dir = os.path.dirname(os.path.abspath(__file__))
+src_dir = os.path.abspath(os.path.join(current_dir, ".."))
+if src_dir not in sys.path:
+    sys.path.insert(0, src_dir)
+
 from contextlib import asynccontextmanager
 import datetime
-import os
 import glob
 import argparse
-import sys
 import time
 import traceback
 from typing import Annotated, List, Literal, Optional, Sequence, Tuple, Union
