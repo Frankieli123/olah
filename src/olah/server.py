@@ -1271,5 +1271,5 @@ def cli():
         ssl_certfile=args.ssl_cert,
     )
 
-if __name__ in ["olah.server", "__main__"]:
+if __name__ == "__main__":
     main()
